@@ -7,7 +7,7 @@ import java.io.Serializable;
  *
  * @author krielwus
  */
-public class oracleConnectInfo implements Serializable {
+public class OracleConnectInfo implements Serializable {
 
     private static final long serialVersionUID = -2945124045666927944L;
 
@@ -63,7 +63,7 @@ public class oracleConnectInfo implements Serializable {
         this.driverClassName = driverClassName;
     }
 
-    public oracleConnectInfo(String type, String url, String username, String password, String driverClassName) {
+    public OracleConnectInfo(String type, String url, String username, String password, String driverClassName) {
         this.type = type;
         this.url = url;
         this.username = username;
@@ -71,11 +71,11 @@ public class oracleConnectInfo implements Serializable {
         this.driverClassName = driverClassName;
     }
 
-    public oracleConnectInfo() {
+    public OracleConnectInfo() {
     }
 
     @Override
     public String toString() {
-        return "oracleConnectInfo{" + "type='" + type + '\'' + ", url='" + url + '\'' + ", username='" + username + '\'' + ", password='" + password + '\'' + ", driverClassName='" + driverClassName + '\'' + '}';
+        return "OracleConnectInfo{" + "type='" + type + '\'' + ", url='" + url + '\'' + ", username='" + username + '\'' + ", password='" + password + '\'' + ", driverClassName='" + driverClassName + '\'' + '}';
     }
 }
