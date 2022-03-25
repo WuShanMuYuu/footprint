@@ -21,7 +21,7 @@ public class OracleTableColumns implements Serializable {
     /**
      * 长度
      */
-    private String data_length;
+    private int data_length;
     /**
      * 是否为空
      */
@@ -30,6 +30,10 @@ public class OracleTableColumns implements Serializable {
      * 注释
      */
     private String comments;
+    /**
+     * 顺序
+     */
+    private int column_id;
 
     public String getColumn_name() {
         return column_name;
@@ -47,11 +51,11 @@ public class OracleTableColumns implements Serializable {
         this.data_type = data_type;
     }
 
-    public String getData_length() {
+    public int getData_length() {
         return data_length;
     }
 
-    public void setData_length(String data_length) {
+    public void setData_length(int data_length) {
         this.data_length = data_length;
     }
 
@@ -71,7 +75,15 @@ public class OracleTableColumns implements Serializable {
         this.comments = comments;
     }
 
-    public OracleTableColumns(String column_name, String data_type, String data_length, String nullable, String comments) {
+    public int getColumn_id() {
+        return column_id;
+    }
+
+    public void setColumn_id(int column_id) {
+        this.column_id = column_id;
+    }
+
+    public OracleTableColumns(String column_name, String data_type, int data_length, String nullable, String comments) {
         this.column_name = column_name;
         this.data_type = data_type;
         this.data_length = data_length;
@@ -79,11 +91,20 @@ public class OracleTableColumns implements Serializable {
         this.comments = comments;
     }
 
+    public OracleTableColumns(String column_name, String data_type, int data_length, String nullable, String comments, int column_id) {
+        this.column_name = column_name;
+        this.data_type = data_type;
+        this.data_length = data_length;
+        this.nullable = nullable;
+        this.comments = comments;
+        this.column_id = column_id;
+    }
+
     public OracleTableColumns() {
     }
 
     @Override
     public String toString() {
-        return "OracleTableColumns{" + "column_name='" + column_name + '\'' + ", data_type='" + data_type + '\'' + ", data_length='" + data_length + '\'' + ", nullable='" + nullable + '\'' + ", comments='" + comments + '\'' + '}';
+        return "OracleTableColumns{" + "column_name='" + column_name + '\'' + ", data_type='" + data_type + '\'' + ", data_length='" + data_length + '\'' + ", nullable='" + nullable + '\'' + ", comments='" + comments + '\'' + ", column_id=" + column_id + '}';
     }
 }
