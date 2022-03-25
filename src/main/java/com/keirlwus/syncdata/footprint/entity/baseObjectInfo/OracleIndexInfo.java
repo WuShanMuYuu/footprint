@@ -26,15 +26,15 @@ public class OracleIndexInfo implements Serializable {
     /**
      * Position of column or attribute within index
      */
-    private String column_position;
+    private Integer column_position;
     /**
      * Maximum length of the column or attribute, in bytes
      */
-    private String column_length;
+    private Integer column_length;
     /**
      * Maximum length of the column or attribute, in characters
      */
-    private String char_length;
+    private Integer char_length;
     /**
      * DESC if this column is sorted descending on disk, otherwise ASC
      */
@@ -68,27 +68,27 @@ public class OracleIndexInfo implements Serializable {
         this.column_name = column_name;
     }
 
-    public String getColumn_position() {
+    public int getColumn_position() {
         return column_position;
     }
 
-    public void setColumn_position(String column_position) {
+    public void setColumn_position(Integer column_position) {
         this.column_position = column_position;
     }
 
-    public String getColumn_length() {
+    public int getColumn_length() {
         return column_length;
     }
 
-    public void setColumn_length(String column_length) {
+    public void setColumn_length(Integer column_length) {
         this.column_length = column_length;
     }
 
-    public String getChar_length() {
+    public int getChar_length() {
         return char_length;
     }
 
-    public void setChar_length(String char_length) {
+    public void setChar_length(Integer char_length) {
         this.char_length = char_length;
     }
 
@@ -111,7 +111,7 @@ public class OracleIndexInfo implements Serializable {
     public OracleIndexInfo() {
     }
 
-    public OracleIndexInfo(String index_name, String table_name, String column_name, String column_position, String column_length, String char_length, String descend, String index_type) {
+    public OracleIndexInfo(String index_name, String table_name, String column_name, Integer column_position, Integer column_length, Integer char_length, String descend, String index_type) {
         this.index_name = index_name;
         this.table_name = table_name;
         this.column_name = column_name;
